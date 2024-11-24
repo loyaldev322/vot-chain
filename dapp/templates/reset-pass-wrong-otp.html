@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTP</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .box {
+      background-image: url("1.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-family: "Poppins", sans-serif;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .box2 {
+      position: relative;
+      border-radius: 10px;
+      background-color: #f3f3f3;
+      border: 1px solid;
+      width: 500px;
+      height: 420px;
+      margin: 0 auto;
+      text-align: center;
+      box-shadow: 0 8px 20px 0 rgb(0 0 0 / 45%);
+    }
+    input[type="text"],
+    input[type="password"] {
+      display: block;
+      width: 400px;
+      font-size: 17px;
+      margin: 15px auto;
+      padding: 15px;
+      background: none;
+      border: 2px solid;
+      outline: none;
+      padding-left: 50px;
+      border: 0.5px solid rgb(78, 74, 74);
+      transition: 0.2s;
+    }
+    input[type="text"]::placeholder,
+    input[type="password"]::placeholder {
+      font-size: 17px;
+    }
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+      box-shadow: 0px 0px 6px rgb(223, 48, 48);
+      border: 0.2px solid rgb(223, 48, 48);
+    }
+    .btn {
+      outline: none;
+      transition: 0.2s;
+      background: none;
+      color: white;
+      border: 1px solid rgb(223, 48, 48);
+      background-color: rgb(223, 48, 48);
+      cursor: pointer;
+      padding: 12px 0px;
+      width: 400px;
+      letter-spacing: 1px;
+      font-size: 17px;
+      text-transform: uppercase;
+      margin-top: 12px;
+    }
+    .btn:hover {
+      transition: 0.2s;
+      background-color: rgb(202, 42, 42);
+    }
+    .title {
+      display: block;
+      margin-top: 20px;
+      color: rgb(223, 48, 48);
+    }
+    .title h1 {
+      letter-spacing: 3px;
+      text-shadow: 4px 4px 4px rgba(214, 48, 48, 0.5);
+    }
+    .box4 {
+      margin: 20px;
+      margin-bottom: 10px;
+    }
+    .link {
+      color: rgb(78, 74, 74);
+    }
+    .box3 {
+      display: flex;
+    }
+    .key {
+      position: absolute;
+      color: rgb(138, 138, 138);
+      font-size: 18px;
+      top: 6.4rem;
+      left: 4rem;
+    }
+    .pass {
+      position: absolute;
+      font-size: 18px;
+      top: 11.5rem;
+      color: rgb(138, 138, 138);
+      left: 4rem;
+    }
+    .unlock {
+      position: absolute;
+      font-size: 18px;
+      color: rgb(138, 138, 138);
+      left: 4rem;
+      top: 16.5rem;
+    }
+    @media (max-width: 525px) {
+      .box2 {
+        width: 400px;
+        height: 400px;
+      }
+      input[type="text"],
+      input[type="password"] {
+        width: 300px;
+        padding: 13px;
+        padding-left: 50px;
+      }
+      .btn {
+        width: 300px;
+      }
+      input[type="text"]::placeholder,
+      input[type="password"]::placeholder {
+        font-size: 15px;
+      }
+      .unlock {
+        top: 16rem;
+      }
+      .pass {
+        top: 11rem;
+      }
+    }
+    @media (max-width: 410px) {
+      .box2 {
+        width: 320px;
+        height: 350px;
+      }
+      input[type="text"],
+      input[type="password"] {
+        width: 250px;
+        font-size: 13px;
+        margin: 13px auto;
+      }
+      .key {
+        left: 3rem;
+        /* font-size: 13px; */
+        top: 5.5rem;
+        font-size: 15px;
+      }
+      .pass {
+        font-size: 15px;
+        left: 3rem;
+        top: 9.8rem;
+      }
+      .unlock {
+        font-size: 15px;
+        left: 3rem;
+        top: 14rem;
+      }
+      .btn {
+        width: 250px;
+        font-size: 13px;
+      }
+      input[type="text"]::placeholder,
+      input[type="password"]::placeholder {
+        font-size: 13px;
+      }
+      .link {
+        font-size: 13px;
+      }
+      .title h1 {
+        font-size: 27px;
+      }
+    }
+  </style>
+  <body>
+    <form method="post">
+      <div class="box">
+        <div class="box2">
+          <div class="title"><h1>Wrong OTP</h1></div>
+          <div class="box3">
+            <i class="fas fa-key key"></i>
+            <input type="text" name="resetotp" placeholder="OTP" />
+          </div>
+          <div class="box33">
+            <i class="fas fa-lock pass"></i>
+            <input type="password" name="newpass" placeholder="new password" />
+          </div>
+          <div class="box3">
+            <i class="fas fa-unlock unlock"></i>
+            <input
+              type="password"
+              name="confirmpass"
+              placeholder="confirm password"
+            />
+          </div>
+          <input type="submit" class="btn" value="Submit" />
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

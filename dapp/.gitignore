@@ -1,0 +1,4 @@
+.vscode
+__pycache__
+sdb.sqlite3
+appENV
